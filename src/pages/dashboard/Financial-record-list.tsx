@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useFinancialRecords } from "../../contexts/Financial-record-context";
-import { useTable, Column, CellProps, Row } from "react-table";
+import { useTable, Column, CellProps } from "react-table";
 import { FinancialRecord } from "../../contexts/Financial-record-context";
 
 interface EditableCellProps extends CellProps<FinancialRecord> {
@@ -13,7 +13,6 @@ const EditableCell: React.FC<EditableCellProps> = ({
   row,
   column,
   updateRecord,
-  editable,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(initialValue);
