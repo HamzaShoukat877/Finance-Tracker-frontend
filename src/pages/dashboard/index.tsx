@@ -16,7 +16,9 @@ export function Dashboard() {
     <div className="dashboard-container">
       <h1>welcome {user?.firstName} Here are your Finance:</h1>
       <FinancialRecordForm />
-      <div>Total money spent: {totalMonthly}</div>
+      {totalMonthly > 0 && (
+        <div>Total money spent this month: {`${totalMonthly} Rs`}</div>
+      )}
       <FinancialRecordList />
     </div>
   );

@@ -14,6 +14,8 @@ import { dark } from "@clerk/themes";
 function App() {
   const { isSignedIn } = useUser();
 
+  console.log(isSignedIn);
+
   return (
     <Router>
       <div className="app-container">
